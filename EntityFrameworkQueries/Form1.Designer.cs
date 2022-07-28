@@ -31,6 +31,7 @@
             this.BtnSelectAllVendors = new System.Windows.Forms.Button();
             this.BtnAllCaliVendors = new System.Windows.Forms.Button();
             this.BtnSelectSpecificColumns = new System.Windows.Forms.Button();
+            this.BtnMiscQueries = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnSelectAllVendors
@@ -63,11 +64,22 @@
             this.BtnSelectSpecificColumns.UseVisualStyleBackColor = true;
             this.BtnSelectSpecificColumns.Click += new System.EventHandler(this.BtnSelectSpecificColumns_Click);
             // 
+            // BtnMiscQueries
+            // 
+            this.BtnMiscQueries.Location = new System.Drawing.Point(62, 407);
+            this.BtnMiscQueries.Name = "BtnMiscQueries";
+            this.BtnMiscQueries.Size = new System.Drawing.Size(383, 58);
+            this.BtnMiscQueries.TabIndex = 3;
+            this.BtnMiscQueries.Text = "Misc Queries";
+            this.BtnMiscQueries.UseVisualStyleBackColor = true;
+            this.BtnMiscQueries.Click += new System.EventHandler(this.BtnMiscQueries_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1467, 842);
+            this.Controls.Add(this.BtnMiscQueries);
             this.Controls.Add(this.BtnSelectSpecificColumns);
             this.Controls.Add(this.BtnAllCaliVendors);
             this.Controls.Add(this.BtnSelectAllVendors);
@@ -82,5 +94,6 @@
         private Button BtnSelectAllVendors;
         private Button BtnAllCaliVendors;
         private Button BtnSelectSpecificColumns;
+        private Button BtnMiscQueries;
     }
 }

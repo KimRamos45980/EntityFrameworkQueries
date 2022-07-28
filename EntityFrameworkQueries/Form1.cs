@@ -65,6 +65,30 @@ namespace EntityFrameworkQueries
 
             MessageBox.Show(displayString.ToString());
         }
+
+        private void BtnMiscQueries_Click(object sender, EventArgs e)
+        {
+            APContext dbContext = new();
+
+            // Check if a vendor exists in washington
+            bool doesExist = (from v in dbContext.Vendors
+                              where v.VendorState == "WA"
+                              select v).Any();
+
+            // Get number of Invoices
+            int invoiceCount = (from v in dbContext.Invoices
+                                select v).Count();
+
+            // Query a single Vendor
+            Vendor ? ibm = (from v in dbContext.Vendors
+                            where v.VendorName == "IBM"
+                            select v).SingleOrDefault();
+
+            if (ibm != null)
+            {
+                // Do something with the Vendor object
+            }
+        }
     }
 
     // Created to have a type set instead of just 'a
